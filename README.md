@@ -2,7 +2,7 @@
 
 * #### Requête d'ajout user :  /user/add (POST) (Ajouter un nouvel user)
 
-*  **Paramètres envoyés**
+>*  **Paramètres envoyés**
 ```
 {
         "login" : nom user,
@@ -10,7 +10,7 @@
 }
 ```
 
-* **Réponses retournées**    
+>* **Réponses retournées**    
 
 ```
 {
