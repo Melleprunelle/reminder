@@ -27,6 +27,26 @@
 
 * #### Requête de supression user :  /user/delete/{id} (DELETE) (Supprime l’utilisateur avec l’id {id}. Les dépenses dont cet utilisateur est le payeur ou le seul concerné seront automatiquement supprimées)
 
+>*  **Paramètres envoyés**
+```
+{
+        "id" : n° user,
+}
+```
+
+>* **Réponses retournées**    
+
+```
+{
+        "status" : OK
+} or
+
+{
+        "status": KO,
+        "error" : Retour message
+        //(cas : Erreur lors de la supression)
+}
+
 
 * #### Requête pour consulter tous les users :  /users (GET) (Renvoie la liste de tous les utilisateurs)
 * #### Requête d'authentification :  /login (POST) (Demande une authentification en tant que session d’administration)
