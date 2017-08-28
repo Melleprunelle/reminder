@@ -46,25 +46,33 @@
         "error" : Retour message
         //(cas : Erreur lors de la supression)
 }
-
+```
 
 * #### Requête pour consulter tous les users :  /users (GET) (Renvoie la liste de tous les utilisateurs)
+
+>*  **Paramètres envoyés**
+```
+{
+        "id" : n° user,
+}
+```
+
+>* **Réponses retournées**    
+
+```
+{
+        "status" : OK
+} or
+
+{
+        "status": KO,
+        "error" : Retour message
+        //(cas : Erreur lors de la supression)
+}
+```
+
 * #### Requête d'authentification :  /login (POST) (Demande une authentification en tant que session d’administration)
 * #### Requête de déconnexion :   /logout (GET) (Demande la révocation d’une clé d’API)
 * #### Requête pour consulter les post-its :  /stickys (GET) Renvoie la liste des post-its existants
 * #### Requête d'ajout de post-it :  /sticky/add (ajout d'un nouveau pense-bête)
 * #### Requête d'ajout de post-it :  /sticky/delete/{id} (supression d'un pense-bête)
-
-
-
-var app = angular.module('myApp', []);
-app.controller('myCtrl', function($scope, $http) {
-  $http.get("wrongfilename.htm")
-  .then(function(response) {
-      $scope.content = response.data;
-  }, function(response) {
-      $scope.content = "Something went wrong";
-  });
-});
-
-
