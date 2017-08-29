@@ -1,6 +1,6 @@
-##### LES ROUTES À UTILISER :
+### LES ROUTES À UTILISER :
 
-###### Pour l'admin
+##### I. POUR L'ADMIN
 
 * #### Requête d'authentification :  /login (POST) (Demande une authentification en tant que session d’administration)
 
