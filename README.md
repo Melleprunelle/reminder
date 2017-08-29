@@ -101,7 +101,7 @@
 {
         "status": KO,
         "error" : Retour message
-        // cas : Erreur lors de l'envois
+        // cas : Erreur lors de l'envoi
 }
 ```
 
