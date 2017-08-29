@@ -1,15 +1,3 @@
-####LES ROUTES À UTILISER :
-
-FAIT - * #### Requête d'ajout user :  /user/add (POST) (Ajoute un nouvel utilisateur à l’application)
-FAIT - * #### Requête d'authentification :  /login (POST) (Demande une authentification en tant que session d’administration)
-FAIT - * #### Requête de supression user :  /user/delete/{id} (DELETE) (Supprime l’utilisateur avec l’id {id}. Supression en cascaade)
-FAIT - * #### Requête de déconnexion :   /logout (GET) (Demande la révocation d’une clé d’API)
-* #### Requête pour consulter les post-its :  /stickys (GET) Renvoie la liste des post-its existants
-FAIT - * #### Requête d'ajout de post-it :  /sticky/add (ajout d'un nouveau pense-bête)
-* #### Requête de supression de post-it :  /sticky/delete/{id} (supression d'un pense-bête)
-
-
-
 ### LES ROUTES À UTILISER :
 
 ---
@@ -193,7 +181,22 @@ FAIT - * #### Requête d'ajout de post-it :  /sticky/add (ajout d'un nouveau pen
     ```
 
 
+* #### Requête de supression de post-it :  /sticky/delete/{id} (supression d'un pense-bête et de son contenu)
+    >*  **Paramètres envoyés**
+    ```
+    {
+        "id" : idPost
+    }
+    ```
 
-
-
-
+    >* **Réponses retournées**    
+    ```
+    {
+            "status" : OK,
+    } or
+    {
+            "status": KO,
+            "error" : "Retour message"
+            // cas : Error de supression de post-it
+    }
+    ```
