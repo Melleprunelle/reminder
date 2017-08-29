@@ -157,39 +157,39 @@ FAIT - * #### Requête d'ajout de post-it :  /sticky/add (ajout d'un nouveau pen
 
     >* **Réponses retournées**    
     ```
-       "sticky": [
-            {
-                "id": idPost,
-                "titre": "titrePost",
-                "date": "05/08/2017",
-                "contenu": "contenuPost",
-                "color": nomColorPost
-            },
-            {
-                "id": idPost,
-                "titre": "titrePost",
-                "date": "05/08/2017",
-                "contenu": "contenuPost",
-                "color": "orangeRed"
-            },
-            {
-                "id": idPost,
-                "titre": "titrePost",
-                "date": "05/08/2017",
-                "contenu": "contenuPost",
-                "color": "oliveDrab"
-            },
-            {
-                "id": idPost,
-                "titre": "titrePost",
-                "date": "05/08/2017",
-                "contenu": "contenuPost",
-                "color": "gold"
-            },
-            {
-                "etc"
-            }     
-        ]
+    "sticky": [
+        {
+             "id": idPost,
+             "titre": "titrePost",
+             "date": "05/08/2017",
+             "contenu": "contenuPost",
+             "color": nomColorPost
+        },
+        {
+            "id": idPost,
+            "titre": "titrePost",
+            "date": "05/08/2017",
+            "contenu": "contenuPost",
+            "color": "orangeRed"
+        },
+        {
+            "id": idPost,
+            "titre": "titrePost",
+            "date": "05/08/2017",
+            "contenu": "contenuPost",
+            "color": "oliveDrab"
+        },
+        {
+            "id": idPost,
+            "titre": "titrePost",
+            "date": "05/08/2017",
+            "contenu": "contenuPost",
+            "color": "gold"
+        },
+        {
+            "etc"
+        }     
+    ]
     ```
 
 
