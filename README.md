@@ -56,7 +56,10 @@
 * #### Requête pour consulter tous les users :  /users (GET) (Renvoie la liste de tous les utilisateurs)
 
 >*  **Paramètres envoyés**
-
+```
+{
+        "id" : n° session de connexion
+}
 
 
 
