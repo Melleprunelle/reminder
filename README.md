@@ -21,7 +21,8 @@
 {
         "status": KO,
         "error" : Retour message
-        //(cas n°1 : User déjà dans BD ou Mot de passe inférieur à 8 caractères)
+        // cas n°1 : User déjà dans BD
+        // cas n°2 : Mot de passe inférieur à 8 caractères
 }
 ```
 
@@ -30,7 +31,7 @@
 >*  **Paramètres envoyés**
 ```
 {
-        "id" : n° user,
+        "id" : n° user
 }
 ```
 
@@ -44,7 +45,7 @@
 {
         "status": KO,
         "error" : Retour message
-        //(cas : Erreur lors de la supression)
+        // cas : Erreur lors de la supression
 }
 ```
 
@@ -53,7 +54,11 @@
 >*  **Paramètres envoyés**
 ```
 {
-        "id" : n° user,
+        users {
+                "id" : n° user1,
+                "nom": nomUser,
+                "prenom": prénomUser
+        }
 }
 ```
 
@@ -67,7 +72,7 @@
 {
         "status": KO,
         "error" : Retour message
-        //(cas : Erreur lors de la supression)
+        // cas : Erreur lors de la supression
 }
 ```
 
