@@ -1,28 +1,62 @@
 ### LES ROUTES À UTILISER :
 
-#### I. POUR L'ADMIN
+#### I. CONNEXION - INSCRIPTION
 
-* #### Requête d'authentification :  /login (POST) (Demande une authentification en tant que session d’administration)
+* #### Requête d'inscription :  /user/add (POST) (inscription, soit l'ajout d'un nouvel utilisateur)
 
     >*  **Paramètres envoyés**
-
     ```
     {
-            "login" : nomAdmin,
-            "password" : passwordAdmin
+            "login" : nomUser,
+            "mail" : mailUser,
+            "password" : passwordUser
+            // password => 8 caractères
     }
     ```
 
     >* **Réponses retournées**    
+    ```
+    {
+            "status" : OK,
+            "id" : n° d'identifiantSession
+    } or
+    {
+            "status": KO,
+            "error" : Retour message
+            // cas n°1 : nomUser déjà dans la BD
+            // cas n°2 : mailUser déjà dans la BD
+            // cas n°3 : passwordUser < 8 caractères
+    }
+    ```
 
+
+
+
+* #### Requête d'authentification :  /login (POST) (Demande une authentification en tant que session d’administration)
+
+    >*  **Paramètres envoyés**
+    ```
+    {
+            "mail" : mailUser,
+            "password" : passwordUser
+    }
+    ```
+
+    >* **Réponses retournées**    
     ```
     {
             "status" : OK
+            "id": n°identifiantSession
     } or
 
     {
             "status": KO,
             "error" : Retour message
-            // cas : Erreur lors de la connexion
+            // cas : Erreur lors de l'authentification
     }
     ```
+
+
+
+
+
