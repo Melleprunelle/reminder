@@ -5,7 +5,6 @@
 * #### Requête d'ajout user :  /user/add (POST) (Ajouter un nouvel user)
 
 >*  **Paramètres envoyés**
-
 ```
 {
         "login" : nom user,
@@ -14,7 +13,6 @@
 ```
 
 >* **Réponses retournées**    
-
 ```
 {
         "status" : OK,
@@ -34,7 +32,6 @@
 * #### Requête de supression user :  /user/delete/{id} (DELETE) (Supprime l’utilisateur avec l’id {id}. Les dépenses dont cet utilisateur est le payeur ou le seul concerné seront automatiquement supprimées)
 
 >*  **Paramètres envoyés**
-
 ```
 {
         "id" : n° user
@@ -42,7 +39,6 @@
 ```
 
 >* **Réponses retournées**    
-
 ```
 {
         "status" : OK
@@ -60,51 +56,49 @@
 * #### Requête pour consulter tous les users :  /users (GET) (Renvoie la liste de tous les utilisateurs)
 
 >*  **Paramètres envoyés**
-```
-users : [ 
-            {
-                "id" : n° user1,
-                "nom": nomUser,
-                "prenom": prénomUser
-            },
-            
-            {
-                "id" : n° user2,
-                "nom": nomUser,
-                "prenom": prénomUser
-            },
-            
-            {
-                "id" : n° user3,
-                "nom": nomUser,
-                "prenom": prénomUser
-            },
-            
-            {
-                "id" : n° user4,
-                "nom": nomUser,
-                "prenom": prénomUser
-            }  
-            
-            {
-                etc.
-            }  
-        ]
-```
+
 
 
 
 >* **Réponses retournées**    
-
 ```
 {
         "status" : OK
+        users : [ 
+                    {
+                        "id" : n° user1,
+                        "nom": nomUser,
+                        "prenom": prénomUser
+                    },
+
+                    {
+                        "id" : n° user2,
+                        "nom": nomUser,
+                        "prenom": prénomUser
+                    },
+
+                    {
+                        "id" : n° user3,
+                        "nom": nomUser,
+                        "prenom": prénomUser
+                    },
+
+                    {
+                        "id" : n° user4,
+                        "nom": nomUser,
+                        "prenom": prénomUser
+                    }  
+
+                    {
+                        etc.
+                    }  
+                ]
 } or
 
 {
         "status": KO,
         "error" : Retour message
-        // cas : Erreur lors de la supression
+        // cas : Erreur lors de l'envois
 }
 ```
 
