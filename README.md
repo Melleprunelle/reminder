@@ -1,17 +1,6 @@
-####LES ROUTES À UTILISER :
-
-FAIT - * #### Requête d'ajout user :  /user/add (POST) (Ajoute un nouvel utilisateur à l’application)
-FAIT - * #### Requête d'authentification :  /login (POST) (Demande une authentification en tant que session d’administration)
-FAIT - * #### Requête de supression user :  /user/delete/{id} (DELETE) (Supprime l’utilisateur avec l’id {id}. Supression en cascaade)
-FAIT - * #### Requête de déconnexion :   /logout (GET) (Demande la révocation d’une clé d’API)
-* #### Requête pour consulter les post-its :  /stickys (GET) Renvoie la liste des post-its existants
-* #### Requête d'ajout de post-it :  /sticky/add (ajout d'un nouveau pense-bête)
-* #### Requête d'ajout de post-it :  /sticky/delete/{id} (supression d'un pense-bête)
-
-
-
 ### LES ROUTES À UTILISER :
 
+---
 #### I. INSCRIPTION - CONNEXION - DECONNEXION
 
 * #### Requête d'inscription :  /user/add (POST) (inscription, soit l'ajout d'un nouvel utilisateur)
@@ -42,8 +31,6 @@ FAIT - * #### Requête de déconnexion :   /logout (GET) (Demande la révocation
     ```
 
 
-
-
 * #### Requête d'authentification :  /login (POST) (Demande une authentification en tant que session d’administration)
     >*  **Paramètres envoyés**
     ```
@@ -66,8 +53,6 @@ FAIT - * #### Requête de déconnexion :   /logout (GET) (Demande la révocation
             // cas : Erreur lors de l'authentification de session
     }
     ```
-
-
 
 
 * #### Requête de déconnexion :   /logout (GET) (Demande la révocation d’une clé d’API)
@@ -93,7 +78,7 @@ FAIT - * #### Requête de déconnexion :   /logout (GET) (Demande la révocation
 
 
 
-
+---
 #### II. SUPRESSION
 
 * #### Requête de supression de compte :  /user/delete/{id} (DELETE) (Supprime l’utilisateur avec l’id {id}. Supression en cascaade)
