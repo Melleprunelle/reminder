@@ -58,12 +58,12 @@
 >*  **Paramètres envoyés**
 ```
 {
-        "id" : n° session de connexion
+        "id" : n° session de connexion admin
 }
-
-
+```
 
 >* **Réponses retournées**    
+
 ```
 {
         "status" : OK
