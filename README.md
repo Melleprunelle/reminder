@@ -1,8 +1,11 @@
 #### LES ROUTES À UTILISER :
 
+
+
 * #### Requête d'ajout user :  /user/add (POST) (Ajouter un nouvel user)
 
 >*  **Paramètres envoyés**
+
 ```
 {
         "login" : nom user,
@@ -26,9 +29,12 @@
 }
 ```
 
+
+
 * #### Requête de supression user :  /user/delete/{id} (DELETE) (Supprime l’utilisateur avec l’id {id}. Les dépenses dont cet utilisateur est le payeur ou le seul concerné seront automatiquement supprimées)
 
 >*  **Paramètres envoyés**
+
 ```
 {
         "id" : n° user
@@ -49,18 +55,44 @@
 }
 ```
 
+
+
 * #### Requête pour consulter tous les users :  /users (GET) (Renvoie la liste de tous les utilisateurs)
 
 >*  **Paramètres envoyés**
 ```
-{
-        users {
+users : [ 
+            {
                 "id" : n° user1,
                 "nom": nomUser,
                 "prenom": prénomUser
-        }
-}
+            },
+            
+            {
+                "id" : n° user2,
+                "nom": nomUser,
+                "prenom": prénomUser
+            },
+            
+            {
+                "id" : n° user3,
+                "nom": nomUser,
+                "prenom": prénomUser
+            },
+            
+            {
+                "id" : n° user4,
+                "nom": nomUser,
+                "prenom": prénomUser
+            }  
+            
+            {
+                etc.
+            }  
+        ]
 ```
+
+
 
 >* **Réponses retournées**    
 
