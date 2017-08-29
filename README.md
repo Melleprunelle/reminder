@@ -1,3 +1,15 @@
+####LES ROUTES À UTILISER :
+
+FAIT - * #### Requête d'ajout user :  /user/add (POST) (Ajoute un nouvel utilisateur à l’application)
+FAIT - * #### Requête d'authentification :  /login (POST) (Demande une authentification en tant que session d’administration)
+FAIT - * #### Requête de supression user :  /user/delete/{id} (DELETE) (Supprime l’utilisateur avec l’id {id}. Supression en cascaade)
+FAIT - * #### Requête de déconnexion :   /logout (GET) (Demande la révocation d’une clé d’API)
+* #### Requête pour consulter les post-its :  /stickys (GET) Renvoie la liste des post-its existants
+* #### Requête d'ajout de post-it :  /sticky/add (ajout d'un nouveau pense-bête)
+* #### Requête d'ajout de post-it :  /sticky/delete/{id} (supression d'un pense-bête)
+
+
+
 ### LES ROUTES À UTILISER :
 
 #### I. INSCRIPTION - CONNEXION - DECONNEXION
@@ -26,6 +38,7 @@
             // cas n°1 : nomUser déjà dans la BD
             // cas n°2 : mailUser déjà dans la BD
             // cas n°3 : passwordUser < 8 caractères
+            // cas n°4 : Error lors de l'ajout dans BD
     }
     ```
 
@@ -50,7 +63,7 @@
     } or
 
     {
-            "status": KO,
+            "status" : KO,
             "error" : Retour message
             // cas : Erreur lors de l'authentification de session
     }
@@ -64,7 +77,7 @@
     >*  **Paramètres envoyés**
     ```
     {
-            none
+            "id" : n° d'identifiantSession
     }
     ```
 
@@ -75,7 +88,7 @@
     } or
 
     {
-            "status": KO,
+            "status" : KO,
             "error" : Retour message
             // cas : Erreur lors de la déconnexion de session
     }
@@ -101,9 +114,46 @@
             "status" : OK,
     } or
     {
-            "status": KO,
+            "status" : KO,
             "error" : Retour message
             // cas : Erreur lors de la supression du compte
     }
     ```
+
+
+
+
+#### III.  POST-ITS
+
+* #### Requête d'ajout de post-it :  /sticky/add (ajout d'un nouveau pense-bête)
+
+    >*  **Paramètres envoyés**
+    ```
+    {
+        "titre" : nomPost,
+        "contenu" : contenuPost,
+        "color" : colorPost
+    }
+    ```
+
+    >* **Réponses retournées**    
+    ```
+    {
+            "status" : OK,
+            "id" : n° post-it
+            "titre" : nomPost,
+            "contenu" : contenuPost, 
+            "color" : nomColorPost
+            // si il y a ajout d'une couleur d'importance
+    } or
+    {
+            "status": KO,
+            "error" : Retour message
+            // cas n°1 : il manque un champ obligatoire
+            // cas n°2 : Error d'ajout de post-it
+    }
+    ```
+
+
+
 
